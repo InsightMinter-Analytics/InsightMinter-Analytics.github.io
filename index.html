@@ -1,90 +1,229 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>InsightMinter | AI & Business Analytics</title>
+    <meta charset="UTF-8">
+    <title>InsightMinter | Strategic Analytics & AI Advisory</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Corporate Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <style>
+        :root {
+            --primary-blue: #0A1F44;
+            --accent-teal: #14B8A6;
+            --dark-bg: #0F172A;
+            --card-bg: #1E293B;
+            --light-text: #E2E8F0;
+            --muted-text: #94A3B8;
+        }
+
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f6f9;
-            text-align: center;
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(to bottom, #0F172A, #111827);
+            color: var(--light-text);
         }
+
         header {
-            background-color: #0d1b2a;
-            color: white;
-            padding: 60px 20px;
+            background: var(--primary-blue);
+            padding: 50px 20px;
+            text-align: center;
+            border-bottom: 2px solid var(--accent-teal);
         }
-        section {
-            padding: 40px 20px;
+
+        .logo-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
         }
-        h1 {
+
+        .logo {
+            height: 60px;
+        }
+
+        header h1 {
             margin: 0;
-            font-size: 40px;
+            font-weight: 600;
+            font-size: 34px;
+            color: white;
         }
-        h2 {
-            color: #0d1b2a;
+
+        header p {
+            margin-top: 10px;
+            color: var(--muted-text);
+            font-size: 16px;
         }
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            max-width: 1000px;
+
+        section {
+            padding: 70px 20px;
+            max-width: 1100px;
             margin: auto;
         }
+
+        h2 {
+            font-weight: 600;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-teal);
+            padding-left: 12px;
+        }
+
         .card {
-            background: white;
-            padding: 20px;
+            background: var(--card-bg);
+            padding: 25px;
+            margin: 20px 0;
             border-radius: 8px;
-            box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid var(--accent-teal);
+            transition: 0.3s ease;
         }
-        footer {
-            background: #0d1b2a;
-            color: white;
-            padding: 20px;
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
         }
-        a.button {
-            display: inline-block;
+
+        .card h3 {
+            margin-top: 0;
+            font-weight: 600;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px 20px;
+        }
+
+        .hero h2 {
+            font-size: 38px;
+            border: none;
+            padding: 0;
+        }
+
+        .hero p {
+            color: var(--muted-text);
+            max-width: 700px;
+            margin: 20px auto;
+            font-size: 18px;
+        }
+
+        button {
+            background: var(--accent-teal);
+            color: #0F172A;
+            border: none;
             padding: 12px 25px;
-            background: #0077b6;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #0D9488;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            max-width: 600px;
+        }
+
+        input, textarea, select {
+            padding: 12px;
+            border-radius: 6px;
+            border: 1px solid #334155;
+            background-color: #1E293B;
             color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 20px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: var(--primary-blue);
+            color: var(--muted-text);
+            border-top: 1px solid var(--accent-teal);
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <h1>InsightMinter</h1>
-    <p>AI & Data-Driven Solutions for Growing Businesses</p>
-    <a class="button" href="mailto:yourmail@example.com">Contact Us</a>
+    <div class="logo-container">
+        <img src="logo.png" alt="InsightMinter Logo" class="logo">
+        <h1>InsightMinter</h1>
+    </div>
+    <p>Strategic Analytics & AI Solutions for European SMEs</p>
 </header>
+
+<section class="hero">
+    <h2>Turning Data into Strategic Advantage</h2>
+    <p>
+        InsightMinter helps small and medium enterprises across Europe leverage
+        business analytics, forecasting, and AI automation to scale efficiently,
+        reduce operational inefficiencies, and improve financial clarity.
+    </p>
+    <button onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">
+        Request Consultation
+    </button>
+</section>
 
 <section>
     <h2>Our Services</h2>
-    <div class="services">
-        <div class="card">
-            <h3>Predictive Maintenance</h3>
-            <p>Reduce downtime using AI-powered forecasting models.</p>
-        </div>
-        <div class="card">
-            <h3>Fraud Detection</h3>
-            <p>Smart anomaly detection to protect your revenue.</p>
-        </div>
-        <div class="card">
-            <h3>Sales Forecasting</h3>
-            <p>Data-backed projections for strategic planning.</p>
-        </div>
-        <div class="card">
-            <h3>BPC Lite</h3>
-            <p>Affordable planning & consolidation for SMEs.</p>
-        </div>
+
+    <div class="card">
+        <h3>Business Analytics</h3>
+        <p>Structured KPI frameworks, dashboarding, and operational analytics for SME decision-makers.</p>
     </div>
+
+    <div class="card">
+        <h3>Financial Planning & Forecasting</h3>
+        <p>Revenue projections, cost modeling, budgeting systems, and scenario analysis tailored for SMEs.</p>
+    </div>
+
+    <div class="card">
+        <h3>AI & Process Automation</h3>
+        <p>Data-driven automation solutions to streamline repetitive workflows and improve efficiency.</p>
+    </div>
+
+    <div class="card">
+        <h3>Churn Prediction & Sales Forecasting</h3>
+        <p>Predictive modeling to improve customer retention and optimize sales performance.</p>
+    </div>
+
+</section>
+
+<section id="contact">
+    <h2>Request Consultation</h2>
+
+    <!-- Replace action with Formspree / Netlify form endpoint later -->
+    <form action="#" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+        <input type="email" name="email" placeholder="Business Email" required>
+
+        <select name="service">
+            <option value="">Select Service</option>
+            <option>Business Analytics</option>
+            <option>Financial Planning & Forecasting</option>
+            <option>AI & Process Automation</option>
+            <option>Churn Prediction & Sales Forecasting</option>
+        </select>
+
+        <textarea name="message" rows="4" placeholder="Briefly describe your business requirement"></textarea>
+
+        <button type="submit">Submit Request</button>
+    </form>
 </section>
 
 <footer>
-    <p>© 2026 InsightMinter | All Rights Reserved</p>
+    © 2026 InsightMinter | Strategic Analytics & AI Advisory
 </footer>
 
 </body>
