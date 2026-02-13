@@ -1,0 +1,1 @@
+# InsightMinter-Analytics.github.io
